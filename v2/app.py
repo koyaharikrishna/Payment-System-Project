@@ -15,8 +15,14 @@ def home():
         <div style="text-align:center"><span class="secure-badge">🛡️ ENCRYPTED SESSION</span></div>
         <h1>Review Payment</h1>
         <p style="text-align:center; color: #555;">Verify your details before submitting.</p>
-        <button onclick="alert('System: Validating security protocols...')">Confirm & Authenticate</button>
+        <button onclick="authorize()">Confirm & Authenticate</button>
     </div>
+    <script>
+        function authorize() {
+            alert("System: Validating security protocols...");
+            window.location.href = "http://localhost:30003";
+        }
+    </script>
     '''
 
 if __name__ == "__main__":

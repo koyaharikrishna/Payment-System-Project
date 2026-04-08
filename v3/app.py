@@ -20,8 +20,13 @@ def home():
             <p><strong>Date:</strong> April 08, 2026</p>
             <p><strong>Status:</strong> Completed</p>
         </div>
-        <button class="btn-receipt">Download E-Receipt</button>
+        <button class="btn-receipt" onclick="restart()">Make Another Payment</button>
     </div>
+    <script>
+        function restart() {
+            window.location.href = "http://localhost:30001";
+        }
+    </script>
     '''
 
 if __name__ == "__main__":

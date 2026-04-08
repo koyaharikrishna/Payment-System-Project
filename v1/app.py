@@ -15,9 +15,20 @@ def home():
     <div class="card">
         <h1>Secure Pay v1</h1>
         <p style="color: #666;">Enter the amount to begin</p>
-        <input type="number" placeholder="Amount ($)">
-        <button>Proceed to Pay</button>
+        <input type="number" id="amt" placeholder="Amount ($)">
+        <button onclick="pay()">Proceed to Pay</button>
     </div>
+    <script>
+        function pay() {
+            let val = document.getElementById('amt').value;
+            if(val > 0) {
+                alert("Processing Payment of $" + val + "...");
+                window.location.href = "http://localhost:30002";
+            } else {
+                alert("Please enter a valid amount!");
+            }
+        }
+    </script>
     '''
 
 if __name__ == "__main__":
